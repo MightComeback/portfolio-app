@@ -1,3 +1,4 @@
+import Contact from "../components/Contact";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div className="overflow-hidden">
       <Hero />
       <Projects />
+      <Contact />
     </div>
   );
 };
