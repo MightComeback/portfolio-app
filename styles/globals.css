@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-neon: #11ffee;
+  --pink-neon: #ff1199;
+}
+
+@layer base {
+  .center {
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+
+  .smoky-text-shadow-blue {
+    text-shadow: 0 2px 1px var(--blue-neon);
+  }
+
+  .smoky-text-shadow-pink {
+    text-shadow: 0 2px 1px var(--pink-neon);
+  }
+
+  .glitched-text-shadow-blue {
+    text-shadow: 0 0 2px #ffffff, -4px 2px 0 var(--blue-neon);
+  }
+
+  .glitched-text-shadow-pink {
+    text-shadow: 0 0 2px #ffffff, -4px 2px 0 var(--pink-neon);
+  }
+
+  .glitched-box-shadow-blue {
+    box-shadow: 8px 5px 5px var(--blue-neon);
+  }
+
+  .glitched-box-shadow-pink {
+    box-shadow: 8px 5px 5px var(--pink-neon);
+  }
+}
+
+@layer components {
+  .smoky-blue-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    @apply smoky-text-shadow-blue orbitron;
+  }
+
+  .smoky-pink-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    @apply smoky-text-shadow-pink orbitron;
+  }
+
+  .glitched-blue-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    @apply glitched-text-shadow-blue orbitron;
+  }
+
+  .glitched-pink-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    @apply glitched-text-shadow-pink orbitron;
+  }
+
+  .glitched-blue-shadow {
+    border: 1px solid #ffffff;
+    @apply glitched-box-shadow-blue;
+  }
+
+  .glitched-pink-shadow {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply glitched-box-shadow-pink;
+  }
+}
+
+@layer utilities {
+  .quicksand {
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .orbitron {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .dancing-sprint {
+    font-family: "Dancing Script", cursive;
+  }
+}
