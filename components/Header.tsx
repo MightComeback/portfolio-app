@@ -7,12 +7,12 @@ const Header = () => {
       <div className="center p-4">
         <ul className="flex justify-between gap-4">
           <li>
-            <Link href="#">
+            <Link href="#projects-section">
               <span className="smoky-blue-text">Projects</span>
             </Link>
           </li>
-          <li>
-            <Link href="#">
+          <li className="hidden sm:block">
+            <Link href="#hero-section">
               <span className="smoky-blue-text">---</span>
             </Link>
           </li>
