@@ -10,12 +10,15 @@ module.exports = {
       colors: {
         "main-neon-blue" : "#11FFEE",
         "main-neon-pink" : "#FEABDA",
+        "old-gen-green" : "#48f9c6",
+        "old-gen-yellow" : "#FAFF18",
+        "old-gen-cyan" : "#027B8F",
       },
       backgroundImage: {
         "neon-blinking-bg" : "repeating-linear-gradient(to bottom,transparent 7px,rgba(0, 0, 0, 0.8) 9px,rgba(0, 0, 0, 0.8) 13px, transparent 13px)",
       },
       screens: {
-        "xs" : "400px",
+        "xs" : "400px"
       },
     },
   },

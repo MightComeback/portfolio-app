@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +7,7 @@
 :root {
   --blue-neon: #11ffee;
   --pink-neon: #ff1199;
+  --old-gen-green: #48f9c6;
 }
 
 @layer base {
@@ -94,6 +94,10 @@
     font-family: "Dancing Script", cursive;
   }
 
+  .press-start {
+    font-family: "Press Start 2P", cursive;
+  }
+
   .neon-background-image {
     background-image: repeating-linear-gradient(
       to bottom,
@@ -105,12 +109,11 @@
   }
 
   .neon-sign {
-    font-size: calc(20px + 18vh);
-    line-height: calc(20px + 20vh);
-    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-    font-family: "Sacramento", cursive;
+    text-shadow: 0 0 5px var(--old-gen-green), 0 0 15px var(--old-gen-green),
+      0 0 20px var(--old-gen-green), 0 0 40px var(--old-gen-green),
+      0 0 60px #ff0000, 0 0 10px var(--old-gen-green), 0 0 98px #ff0000;
+    color: var(--old-gen-green);
+    font-family: "Dancing Script", cursive;
     text-align: center;
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
@@ -131,9 +134,10 @@
     54%,
     56%,
     100% {
-      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-        0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-      color: #fff6a9;
+      text-shadow: 0 0 5px var(--old-gen-green), 0 0 15px var(--old-gen-green),
+        0 0 20px var(--old-gen-green), 0 0 40px var(--old-gen-green),
+        0 0 60px #ff0000, 0 0 10px var(--old-gen-green), 0 0 98px #ff0000;
+      color: var(--old-gen-green);
     }
   }
 
@@ -152,9 +156,10 @@
     54%,
     56%,
     100% {
-      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-        0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-      color: #fff6a9;
+      text-shadow: 0 0 5px var(--old-gen-green), 0 0 15px var(--old-gen-green),
+        0 0 20px var(--old-gen-green), 0 0 40px var(--old-gen-green),
+        0 0 60px #ff0000, 0 0 10px var(--old-gen-green), 0 0 98px #ff0000;
+      color: var(--old-gen-green);
     }
   }
 }

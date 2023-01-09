@@ -6,7 +6,7 @@ const NeonSign = ({
   label: string;
 }) => {
   return (
-    <div className={`absolute ${className}`}>
+    <div className={`absolute z-0 ${className}`}>
       <h1 className="neon-sign">{label}</h1>
     </div>
   );

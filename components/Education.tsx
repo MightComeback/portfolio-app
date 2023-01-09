@@ -1,4 +1,5 @@
 import React from "react";
+import { OldSign } from "./(reusable)/OldSign";
 import { Showcase } from "./(reusable)/Showcase";
 
 const Education = () => {
