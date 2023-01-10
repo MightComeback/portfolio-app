@@ -54,6 +54,7 @@ export const ProjectsData = [
       "NextJS 13", "React", "TypeScript", "TailwindCSS", "MongoDb", "Prisma", "Pusher", "Next Auth"
     ],
     details: "I've always wanted to create an Online chat platform, so to begin with I created a small chat app.",
+    github: "https://github.com/MightComeback/chat-webapp",
   },
   {
     title: "Youtube Video Randomizer",
@@ -63,6 +64,7 @@ export const ProjectsData = [
       "React", "JavaScript", "TailwindCSS", "Youtube API"
     ],
     details: "Random funny tool to kill some time. Had this idea in mind, so why not implement.",
+    github: "https://github.com/MightComeback/youtube-randomizer",
   },
   {
     title: "Rain & Chill",
@@ -72,6 +74,7 @@ export const ProjectsData = [
       "React", "JavaScript", "TailwindCSS"
     ],
     details: "A good website for studies or programming. Why listening to something like this on Youtube, when you can create your own one :)",
+    github: "https://github.com/MightComeback/rain-vibes",
   },
   {
     title: "Checkers",
@@ -81,5 +84,6 @@ export const ProjectsData = [
       "C++", "Qt"
     ],
     details: "Had a lot of fun creating this Checkers project, liked working in Qt and finally put to work my 1.5 years of C++ experience. ",
+    github: "https://github.com/MightComeback/checkers-qt",
   },
 ];

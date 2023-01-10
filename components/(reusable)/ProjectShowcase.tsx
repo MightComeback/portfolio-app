@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const ProjectShowcase = ({
@@ -8,12 +9,14 @@ const ProjectShowcase = ({
   image,
   tech,
   details,
+  github,
 }: {
   title: string;
   description: string;
   image: string;
   tech: string[];
   details: string;
+  github: string;
 }) => {
   const [focused, setFocused] = useState(false);
 
@@ -23,11 +26,11 @@ const ProjectShowcase = ({
   };
 
   return (
-    <div className="px-4 relative quicksand z-20">
+    <div className="px-4 relative quicksand">
       <div
         className="flex flex-col p-2 text-white items-center rounded-md shadow-lg
         transition-transform hover:scale-110 hover:cursor-pointer bg-main-neon-pink
-        ease-in-out border border-main-neon-blue"
+        ease-in-out border border-main-neon-blue z-20"
         onClick={() => focusProject()}
       >
         <h3 className="smoky-blue-text m-2">{title}</h3>
@@ -47,13 +50,18 @@ const ProjectShowcase = ({
             </div>
           ))}
         </div>
+        <div className="w-full">
+          <a className="float-right" target="_blank" href={github}>
+            <Image src="/github-icon.png" alt="github" width={30} height={30} />
+          </a>
+        </div>
       </div>
       {focused && (
-        <div className="sm:flex hidden fixed top-0 left-0 w-screen h-screen backdrop-blur-sm items-center justify-center z-10">
+        <div className="sm:flex hidden fixed top-0 left-0 w-screen h-screen backdrop-blur-sm items-center justify-center z-50">
           <div
             className="sm:flex hidden flex-col p-2 text-white items-center rounded-md shadow-md
           bg-main-neon-pink border border-main-neon-blue
-          w-[calc(100vw-15%)] z-20"
+          w-[calc(100vw-15%)] z-50"
             onClick={() => focusProject()}
           >
             <h3 className="smoky-blue-text m-2">{title}</h3>
@@ -70,6 +78,17 @@ const ProjectShowcase = ({
                       {technology}
                     </div>
                   ))}
+                </div>
+                <div className="w-full flex gap-4">
+                  <p className="bold text-xl">Github source code: </p>
+                  <a target="_blank" href={github}>
+                    <Image
+                      src="/github-icon.png"
+                      alt="github"
+                      width={30}
+                      height={30}
+                    />
+                  </a>
                 </div>
               </div>
             </div>

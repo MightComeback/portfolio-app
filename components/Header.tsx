@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import React from "react";
 import { heroScroll } from "./Hero";
 import { projectScroll } from "./Projects";
 
@@ -23,17 +21,19 @@ const Header = () => {
         <ul className="flex justify-between gap-4">
           <li>
             <button onClick={() => scrollToProjects()}>
-              <span className="smoky-blue-text">Projects</span>
+              <span className="hidden xs:block smoky-blue-text">Projects</span>
             </button>
           </li>
-          <li className="hidden sm:block">
-            <Link href="#hero-section">
-              <span className="smoky-blue-text">---</span>
-            </Link>
+          <li className="">
+            <a target="_blank" href="https://github.com/MightComeback">
+              <span className="smoky-blue-text">GITHUB</span>
+            </a>
           </li>
           <li>
             <button onClick={() => scrollToContact()}>
-              <span className="smoky-blue-text">Contact me</span>
+              <span className="hidden xs:block smoky-blue-text">
+                Contact me
+              </span>
             </button>
           </li>
         </ul>
