@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useStateContext } from "../../contexts/ContextProvider";
 
 export default function ImageHolder({
   className,
