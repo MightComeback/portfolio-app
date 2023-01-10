@@ -2,6 +2,8 @@
 
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import ImageHolder from "./(reusable)/ImageHolder";
+import { OldSign } from "./(reusable)/OldSign";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -35,7 +37,7 @@ const Contact = () => {
       <div className="bg-main-neon-pink w-full quicksand py-6">
         <div className="center flex flex-col items-center">
           <h2 className="smoky-blue-text my-4 text-xl">Contact Me</h2>
-          <div className="glitched-box-shadow-blue w-1/2 border border-white p-2">
+          <div className="relative glitched-box-shadow-blue w-1/2 border border-white p-2">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col">
               <label className="text-white underline decoration-main-neon-blue">
                 Your Name
@@ -74,6 +76,25 @@ const Contact = () => {
                 )}
               </div>
             </form>
+            <OldSign
+              classNameInner="bg-white rounded-md right-[-9.8rem] bottom-[14.2rem]"
+              classNameOuter="rounded-md text-white p-1 bg-old-gen-green"
+              label="NEW"
+            />
+            <OldSign
+              classNameInner="bg-white rounded-md right-[-9.6rem] bottom-[14.4rem]"
+              classNameOuter="rounded-md text-white p-1 bg-old-gen-green"
+              label="NEW"
+            />
+            <OldSign
+              classNameInner="bg-white rounded-md right-[-9.4rem] bottom-[14.6rem]"
+              classNameOuter="rounded-md text-white p-1 bg-old-gen-green"
+              label="NEW"
+            />
+            <ImageHolder
+              className="-left-[16rem] bottom-[30%]"
+              image="/retro-(10).png"
+            />
           </div>
         </div>
       </div>

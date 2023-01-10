@@ -23,7 +23,7 @@ const ProjectShowcase = ({
   };
 
   return (
-    <div className="px-4 relative quicksand">
+    <div className="px-4 relative quicksand z-20">
       <div
         className="flex flex-col p-2 text-white items-center rounded-md shadow-lg
         transition-transform hover:scale-110 hover:cursor-pointer bg-main-neon-pink

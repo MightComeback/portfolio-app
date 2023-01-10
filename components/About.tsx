@@ -1,9 +1,10 @@
+import NeonSign from "./(reusable)/NeonSign";
 import { Showcase } from "./(reusable)/Showcase";
 
 const About = () => {
   return (
     <Showcase title="About Me">
-      <div className="text-white font-semibold quicksand">
+      <div className="relative text-white font-semibold quicksand">
         <p>
           Hi, my name is{" "}
           <span className="font-bold text-main-neon-blue text-lg">
@@ -35,6 +36,7 @@ const About = () => {
             </ul>
           </div>
         </div>
+        <NeonSign className="text-4xl -top-[30%] right-0" label="dev" />
       </div>
     </Showcase>
   );
