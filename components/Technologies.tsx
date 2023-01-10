@@ -2,7 +2,7 @@ import { Icons } from "../utils/data";
 import Image from "next/image";
 import { Showcase } from "./(reusable)/Showcase";
 
-const Technologies = () => {
+const Technologies = ({ english }: { english: boolean }) => {
   return (
     <Showcase title="Technologies">
       <section className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 p-2">
@@ -17,7 +17,13 @@ const Technologies = () => {
                 height={48}
               />
             </div>
-            <p className="text-white font-light quicksand">{icon.name}</p>
+            <p
+              className={`text-white font-light ${
+                english ? "quicksand" : "comfortaa"
+              }`}
+            >
+              {icon.name}
+            </p>
           </div>
         ))}
       </section>

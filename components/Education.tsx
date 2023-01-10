@@ -1,15 +1,19 @@
-import React from "react";
-import { OldSign } from "./(reusable)/OldSign";
 import { Showcase } from "./(reusable)/Showcase";
 
-const Education = () => {
+const Education = ({ english }: { english: boolean }) => {
   return (
     <Showcase title="Education">
-      <div className="quicksand text-white">
-        <p>
-          <span className="font-semibold">Computer Science</span> - Zaporizhzhya
-          University "National Polytechnic" <br />
-          2021 - 2025.
+      <div className={`${english ? "quicksand" : "comfortaa"} text-white`}>
+        <p className={`${english ? "quicksand" : "comfortaa"}`}>
+          <span className="font-semibold">
+            {english ? "Computer Science" : "Комп'ютерні науки"}
+          </span>{" "}
+          -
+          {english
+            ? " Zaporizhzhya National Technical University"
+            : " Запорізький Національний Технічний Університет"}
+          <br />
+          {english ? "2021 - Current" : "2021 - Зараз"}
         </p>
       </div>
     </Showcase>

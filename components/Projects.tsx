@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { ProjectsData } from "../utils/data";
+import { useEffect, useRef } from "react";
+import { ProjectsData, ProjectsDataUkrainian } from "../utils/data";
 import ImageHolder from "./(reusable)/ImageHolder";
 import NeonSign from "./(reusable)/NeonSign";
 import { OldSign } from "./(reusable)/OldSign";
@@ -13,7 +13,7 @@ export async function projectScroll() {
   return projectHeight;
 }
 
-const Projects = () => {
+const Projects = ({ english }: { english: boolean }) => {
   const projectRef = useRef<any>();
 
   useEffect(() => {
@@ -23,20 +23,37 @@ const Projects = () => {
   return (
     <div ref={projectRef} className="w-full bg-main-neon-pink overflow-hidden">
       <div className="center flex flex-col items-center">
-        <h2 className="smoky-blue-text my-4 text-xl">My Projects</h2>
+        <h2 className="smoky-blue-text my-4 text-xl">
+          {english ? "My Projects" : "Мої проекти"}
+        </h2>
         <div className="relative flex flex-wrap md:flex-row flex-col justify-between">
-          {ProjectsData.map((project, id) => (
-            <div key={id} className="my-8 md:basis-1/2 gap-4">
-              <ProjectShowcase
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tech={project.tech}
-                details={project.details}
-                github={project.github}
-              />
-            </div>
-          ))}
+          {english
+            ? ProjectsData.map((project, id) => (
+                <div key={id} className="my-8 md:basis-1/2 gap-4">
+                  <ProjectShowcase
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    tech={project.tech}
+                    details={project.details}
+                    github={project.github}
+                    english={english}
+                  />
+                </div>
+              ))
+            : ProjectsDataUkrainian.map((project, id) => (
+                <div key={id} className="my-8 md:basis-1/2 gap-4">
+                  <ProjectShowcase
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    tech={project.tech}
+                    details={project.details}
+                    github={project.github}
+                    english={english}
+                  />
+                </div>
+              ))}
           <NeonSign
             className="text-xl right-[15%] -top-[0.5rem]"
             label="social network coming soon"

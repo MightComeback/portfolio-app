@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import ImageHolder from "./(reusable)/ImageHolder";
 import { OldSign } from "./(reusable)/OldSign";
 
-const Contact = () => {
+const Contact = ({ english }: { english: boolean }) => {
   const form = useRef<HTMLFormElement>(null);
   const [messageSent, setMessageSent] = useState(false);
 
@@ -34,13 +34,19 @@ const Contact = () => {
 
   return (
     <>
-      <div className="bg-main-neon-pink w-full quicksand py-6">
+      <div
+        className={`bg-main-neon-pink w-full ${
+          english ? "quicksand" : "comfortaa"
+        } py-6 px-4`}
+      >
         <div className="center flex flex-col items-center">
-          <h2 className="smoky-blue-text my-4 text-xl">Contact Me</h2>
-          <div className="relative glitched-box-shadow-blue w-1/2 border border-white p-2">
+          <h2 className="smoky-blue-text my-4 text-xl">
+            {english ? "Contact Me" : "Зв'яжіться зі мною"}
+          </h2>
+          <div className="relative glitched-box-shadow-blue w-full md:w-1/2 border border-white p-2">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col">
               <label className="text-white underline decoration-main-neon-blue">
-                Your Name
+                {english ? "Your Name" : "Ваше Ім'я"}
               </label>
               <input
                 className="w-full p-1"
@@ -49,7 +55,7 @@ const Contact = () => {
                 required
               ></input>
               <label className="text-white underline decoration-main-neon-blue">
-                Your Email
+                {english ? "Your Email" : "Ваша електронна адреса"}
               </label>
               <input
                 className="w-full p-1"
@@ -58,7 +64,7 @@ const Contact = () => {
                 required
               ></input>
               <label className="text-white underline decoration-main-neon-blue">
-                Message
+                {english ? "Message" : "Ваше повідомлення"}
               </label>
               <textarea
                 className="w-full glitched-box-shadow-pink p-1"
@@ -72,7 +78,11 @@ const Contact = () => {
                   value="Send"
                 />
                 {messageSent && (
-                  <p className="text-white font-bold">Message has been sent!</p>
+                  <p className="text-white font-bold">
+                    {english
+                      ? "Message has been sent!"
+                      : "Повідомлення відправлено!"}
+                  </p>
                 )}
               </div>
             </form>

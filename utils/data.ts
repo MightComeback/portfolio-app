@@ -48,7 +48,7 @@ export const Icons = [
 export const ProjectsData = [
   {
     title: "Chat App",
-    description: "A basic online chat application utilizing Next 13 and Typescript, as well as React components with Google Auth, using MongoDb to store users and messages and TailwindCSS for styling.",
+    description: "An online chat application utilizing Next 13 and Typescript, as well as React components with Google Auth, using MongoDb to store users and messages and TailwindCSS for styling.",
     image: "/chat-app.png",
     tech: [
       "NextJS 13", "React", "TypeScript", "TailwindCSS", "MongoDb", "Prisma", "Pusher", "Next Auth"
@@ -84,6 +84,49 @@ export const ProjectsData = [
       "C++", "Qt"
     ],
     details: "Had a lot of fun creating this Checkers project, liked working in Qt and finally put to work my 1.5 years of C++ experience. ",
+    github: "https://github.com/MightComeback/checkers-qt",
+  },
+];
+
+export const ProjectsDataUkrainian = [
+  {
+    title: "Додаток Онлайн Чат",
+    description: "Додаток онлайн-чату, що використовує Next 13 і Typescript, а також компоненти React разом із Google Auth, використовує MongoDb для зберігання користувачів і повідомлень, та TailwindCSS для стилізації.",
+    image: "/chat-app.png",
+    tech: [
+      "NextJS 13", "React", "TypeScript", "TailwindCSS", "MongoDb", "Prisma", "Pusher", "Next Auth"
+    ],
+    details: "Я завжди хотів створити онлайн-чат, тому для початку я створив невеликий застосунок для чату.",
+    github: "https://github.com/MightComeback/chat-webapp",
+  },
+  {
+    title: "Генератор випадкових Відео",
+    description: "Весела програма, яка використовує Youtube API для отримання випадкових відео Youtube, які ви ніколи не знайшли б. Маючи під капотом React, Javascript і Tailwindcss для мінімального дизайну.",
+    image: "/youtube-randomizer.png",
+    tech: [
+      "React", "JavaScript", "TailwindCSS", "Youtube API"
+    ],
+    details: "Смішний інструмент, щоб вбити час. Мав цю ідею в голові, то чому б не реалізувати.",
+    github: "https://github.com/MightComeback/youtube-randomizer",
+  },
+  {
+    title: "Безкінечний Дощ",
+    description: "Веб-сайт для прослуховування дощу. Ні більше, ні менше. Використав компоненти React і Javascript. Tailwindcss для мінімального дизайну.",
+    image: "rain.png",
+    tech: [
+      "React", "JavaScript", "TailwindCSS"
+    ],
+    details: "Хороший сайт для навчання чи програмування. Навіщо слухати щось подібне на Youtube, коли можна створити свій власний додаток :)",
+    github: "https://github.com/MightComeback/rain-vibes",
+  },
+  {
+    title: "Шашки",
+    description: "Шашки з відкритим кодом, створені для курсового проекту. Використання віджетів QT та C++.",
+    image: "checkers.png",
+    tech: [
+      "C++", "Qt"
+    ],
+    details: "Мені було дуже весело створювати цей проект, мені сподобалося працювати в Qt і, нарешті, використав свій 1,5-річний досвід із C++.",
     github: "https://github.com/MightComeback/checkers-qt",
   },
 ];

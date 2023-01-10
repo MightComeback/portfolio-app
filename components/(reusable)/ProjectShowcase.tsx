@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const ProjectShowcase = ({
@@ -10,6 +9,7 @@ const ProjectShowcase = ({
   tech,
   details,
   github,
+  english,
 }: {
   title: string;
   description: string;
@@ -17,6 +17,7 @@ const ProjectShowcase = ({
   tech: string[];
   details: string;
   github: string;
+  english: boolean;
 }) => {
   const [focused, setFocused] = useState(false);
 
@@ -26,7 +27,7 @@ const ProjectShowcase = ({
   };
 
   return (
-    <div className="px-4 relative quicksand">
+    <div className={`px-4 relative ${english ? "quicksand" : "comfortaa"}`}>
       <div
         className="flex flex-col p-2 text-white items-center rounded-md shadow-lg
         transition-transform hover:scale-110 hover:cursor-pointer bg-main-neon-pink
@@ -52,14 +53,14 @@ const ProjectShowcase = ({
         </div>
         <div className="w-full">
           <a className="float-right" target="_blank" href={github}>
-            <Image src="/github-icon.png" alt="github" width={30} height={30} />
+            <img src="/github-icon.png" alt="github" width={30} height={30} />
           </a>
         </div>
       </div>
       {focused && (
         <div className="sm:flex hidden fixed top-0 left-0 w-screen h-screen backdrop-blur-sm items-center justify-center z-50">
           <div
-            className="sm:flex hidden flex-col p-2 text-white items-center rounded-md shadow-md
+            className="sm:flex cursor-pointer hidden flex-col p-2 text-white items-center rounded-md shadow-md
           bg-main-neon-pink border border-main-neon-blue
           w-[calc(100vw-15%)] z-50"
             onClick={() => focusProject()}
@@ -82,7 +83,7 @@ const ProjectShowcase = ({
                 <div className="w-full flex gap-4">
                   <p className="bold text-xl">Github source code: </p>
                   <a target="_blank" href={github}>
-                    <Image
+                    <img
                       src="/github-icon.png"
                       alt="github"
                       width={30}

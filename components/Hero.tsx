@@ -15,7 +15,7 @@ export async function heroScroll() {
   return heroHeight;
 }
 
-const Hero = () => {
+const Hero = ({ english }: { english: boolean }) => {
   const heroRef = useRef<any>(null);
 
   useEffect(() => {
@@ -28,13 +28,33 @@ const Hero = () => {
       className="w-full bg-main-neon-pink overflow-hidden -z-20"
     >
       <section className="center w-full flex flex-col justify-center items-center z-10">
-        <div className="relative xs:text-3xl text-2xl w-fit flex justify-between my-12 z-20">
-          <h1 className="smoky-blue-text mx-4 flex-1">Ivan</h1>
-          <h1 className="smoky-blue-text pl-4 flex-2">Kuznetsov</h1>
-          <NeonSign
-            className="-bottom-[30%] xs:left-2 left-3"
-            label="______________"
-          />
+        <div className="xs:text-3xl text-2xl flex flex-col items-center my-12 z-20">
+          <div className="relative flex w-fit justify-between">
+            <h1 className="smoky-blue-text mx-4 flex-1">
+              {english ? "Ivan" : "Іван"}
+            </h1>
+            <h1 className="smoky-blue-text pl-4 flex-2">
+              {english ? "Kuznetsov" : "Кузнецов"}
+            </h1>
+            <NeonSign
+              className="-bottom-[30%] xs:left-2 left-3"
+              label={english ? "______________" : "____________"}
+            />
+          </div>
+          <div className="z-20 text-xl mt-6">
+            <a
+              target="_blank"
+              href={
+                english
+                  ? "/Kuznetsov_Ivan_CV_Web_Dev.pdf"
+                  : "/Кузнецов_Іван_CV_Веб_Розробник.pdf"
+              }
+            >
+              <h2 className="smoky-blue-text">
+                {english ? "MY CV" : "Мій СV"}
+              </h2>
+            </a>
+          </div>
         </div>
         <ImageHolder className="top-[16rem] left-16" image="/retro-(1).png" />
         <div className="flex flex-col gap-8 w-full p-4">
@@ -50,10 +70,10 @@ const Hero = () => {
               label="!!!"
             />
             <div className="md:basis-2/3 z-10">
-              <About />
+              <About english={english} />
             </div>
             <div className="md:basis-1/3 z-10">
-              <Education />
+              <Education english={english} />
             </div>
             <OldSign
               classNameInner="w-fit p-1 bg-old-gen-yellow right-[7rem] top-[28rem]"
@@ -82,7 +102,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:basis-1/3 z-10">
-              <Skills />
+              <Skills english={english} />
             </div>
             <OldSign
               classNameInner="bg-white rounded-md left-[4.7rem] bottom-[14rem]"
@@ -95,7 +115,7 @@ const Hero = () => {
               label="NEW"
             />
             <div className="md:basis-2/3 z-10">
-              <Technologies />
+              <Technologies english={english} />
             </div>
           </div>
         </div>
