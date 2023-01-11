@@ -28,6 +28,10 @@ export const Icons = [
     image: '/tailwindcss.png',
   },
   {
+    name: 'REST API',
+    image: '/rest-api.png'
+  },
+  {
     name: 'MongoDb',
     image: '/mongodb.png',
   },
