@@ -50,6 +50,17 @@ export const Icons = [
 ];
 
 export const ProjectsData = [
+  
+  {
+    title: "Online Clothing Store",
+    description: "Fully operational clothing store website with Stripe.",
+    image: "/online-store.png",
+    tech: [
+      "Stripe", "Axios", "Postgres", "Prisma", "NextJS 13", "React", "TypeScript", "TailwindCSS"
+    ],
+    details: "This is an online web store selling clothes. I am using Stripe for checkout and orders, Axios to fetch data, I store products in Postgres database(local) as well as Stripe. Using NextJS 13 stack with TypeScript and TailwindCSS for styling.",
+    github: "https://github.com/MightComeback/online-store",
+  },
   {
     title: "Chat App",
     description: "An online chat application utilizing Next 13 and Typescript, as well as React components with Google Auth, using MongoDb to store users and messages and TailwindCSS for styling.",
