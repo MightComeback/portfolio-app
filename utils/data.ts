@@ -16,6 +16,10 @@ export const Icons = [
     image: '/react.svg',
   },
   {
+    name: 'React-Native',
+    image: '/react-native.svg',
+  },
+  {
     name: 'NextJS 13',
     image: '/nextjs.svg',
   },
@@ -36,6 +40,10 @@ export const Icons = [
     image: '/mongodb.png',
   },
   {
+    name: 'PostgreSQL',
+    image: '/postgresql.svg',
+  },
+  {
     name: 'Prisma JS',
     image: '/prisma.svg',
   },
@@ -46,6 +54,10 @@ export const Icons = [
   {
     name: 'QT Creator',
     image: '/qt.svg',
+  },
+  {
+    name: 'Stripe',
+    image: '/stripe.svg',
   },
 ];
 
@@ -101,6 +113,16 @@ export const ProjectsData = [
     details: "Had a lot of fun creating this Checkers project, liked working in Qt and finally put to work my 1.5 years of C++ experience. ",
     github: "https://github.com/MightComeback/checkers-qt",
   },
+  {
+   title: "Fitness Tracker",
+    description: "A simple Fitness Calorie and Workout tracker for mobile devices. Built in React-Native",
+    image: "fitness-tracker.png",
+    tech: [
+      "React-Native", "TypeScript", "NativeWind", "Expo"
+    ],
+    details: "It is a very simple tracker app, created for myself for daily use. Using React-Native for cross-platform compatibility and NativeWind (Tailwind) for easy designing features.",
+    github: "https://github.com/MightComeback/fitness-tracker", 
+  },
 ];
 
 export const ProjectsDataUkrainian = [
@@ -143,5 +165,15 @@ export const ProjectsDataUkrainian = [
     ],
     details: "Мені було дуже весело створювати цей проект, мені сподобалося працювати в Qt і, нарешті, використав свій 1,5-річний досвід із C++.",
     github: "https://github.com/MightComeback/checkers-qt",
+  },
+  {
+   title: "Фітнес Трекер",
+    description: "Простий фітнес трекер калорій і тренувань для мобільних пристроїв. Побудований на React-Native",
+    image: "fitness-tracker.png",
+    tech: [
+      "React-Native", "TypeScript", "NativeWind", "Expo"
+    ],
+    details: "Це дуже проста програма-трекер, створена для себе для щоденного використання. Використовув React-Native для крос-платформної сумісності та NativeWind (Tailwind) для легкого дизайну.",
+    github: "https://github.com/MightComeback/fitness-tracker", 
   },
 ];

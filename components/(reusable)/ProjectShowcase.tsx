@@ -22,7 +22,6 @@ const ProjectShowcase = ({
   const [focused, setFocused] = useState(false);
 
   const focusProject = () => {
-    console.log(focused);
     setFocused(!focused);
   };
 
@@ -67,7 +66,9 @@ const ProjectShowcase = ({
           >
             <h3 className="smoky-blue-text m-2">{title}</h3>
             <div className="pb-2 border-b flex flex-col lg:flex-row items-center">
-              <img className="w-[calc(100vw-50%)]" src={image} alt={title} />
+              {image !== "fitness-tracker.png" && (
+                <img className="w-[calc(100vw-50%)]" src={image} alt={title} />
+              )}
               <div className="flex flex-col justify-start p-2">
                 <p className="my-2 text-lg">{description}</p>
                 <div className="flex flex-wrap my-2 gap-4">
