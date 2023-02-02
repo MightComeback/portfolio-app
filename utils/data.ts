@@ -28,6 +28,10 @@ export const Icons = [
     image: '/typescript.svg',
   },
   {
+    name: 'Python3',
+    image: '/python.svg',
+  },
+  {
     name: 'TailwindCSS',
     image: '/tailwindcss.png',
   },
