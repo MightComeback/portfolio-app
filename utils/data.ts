@@ -32,12 +32,20 @@ export const Icons = [
     image: '/python.svg',
   },
   {
+    name: 'Node JS',
+    image: '/node-js.svg',
+  },
+  {
+    name: 'Redux',
+    image: '/redux.svg',
+  },
+  {
     name: 'TailwindCSS',
     image: '/tailwindcss.png',
   },
   {
     name: 'REST API',
-    image: '/rest-api.png'
+    image: '/rest-api.png',
   },
   {
     name: 'MongoDb',
@@ -80,7 +88,7 @@ export const ProjectsData = [
   {
     title: "Chat App",
     description: "An online chat application utilizing Next 13 and Typescript, as well as React components with Google Auth, using MongoDb to store users and messages and TailwindCSS for styling.",
-    image: "/chat-app.png",
+    image: "/chat-webapp.png",
     tech: [
       "NextJS 13", "React", "TypeScript", "TailwindCSS", "MongoDb", "Prisma", "Pusher", "Next Auth"
     ],
