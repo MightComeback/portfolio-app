@@ -41,7 +41,7 @@ export const Icons = [
   },
   {
     name: 'TailwindCSS',
-    image: '/tailwindcss.png',
+    image: '/tailwindcss.svg',
   },
   {
     name: 'REST API',
