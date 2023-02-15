@@ -152,6 +152,16 @@ export const ProjectsData = [
     details: "It is a very simple tracker app, created for myself for daily use. Using React-Native for cross-platform compatibility and NativeWind (Tailwind) for easy designing features.",
     github: "https://github.com/MightComeback/fitness-tracker", 
   },
+  {
+   title: "Gather Game",
+    description: "A simple Game built on Pygame using Python3.",
+    image: "gather-game.png",
+    tech: [
+      "Python", "Pygame"
+    ],
+    details: "This game features sound effects and music. You gather coins evading enemies.",
+    github: "https://github.com/MightComeback/gather_game", 
+  },
 ];
 
 export const ProjectsDataUkrainian = [
@@ -168,7 +178,7 @@ export const ProjectsDataUkrainian = [
   {
     title: "Додаток Онлайн Чат",
     description: "Додаток онлайн-чату, що використовує Next 13 і Typescript, а також компоненти React разом із Google Auth, використовує MongoDb для зберігання користувачів і повідомлень, та TailwindCSS для стилізації.",
-    image: "/chat-app.png",
+    image: "/chat-webapp.png",
     tech: [
       "NextJS 13", "React", "TypeScript", "TailwindCSS", "MongoDb", "Prisma", "Pusher", "Next Auth"
     ],
@@ -224,5 +234,15 @@ export const ProjectsDataUkrainian = [
     ],
     details: "Це дуже проста програма-трекер, створена для себе для щоденного використання. Використовув React-Native для крос-платформної сумісності та NativeWind (Tailwind) для легкого дизайну.",
     github: "https://github.com/MightComeback/fitness-tracker", 
+  },
+  {
+   title: "Збиральник Гра",
+    description: "Проста гра побудована на Pygame з Python3.",
+    image: "gather-game.png",
+    tech: [
+      "Python", "Pygame"
+    ],
+    details: "Ця гра містить звукові ефекти та музику. Ви збираєте монети, ухиляючись від ворогів.",
+    github: "https://github.com/MightComeback/gather_game", 
   },
 ];
